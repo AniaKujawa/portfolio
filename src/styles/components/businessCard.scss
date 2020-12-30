@@ -1,9 +1,36 @@
 .business-card {
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 2px 5px 0px #000000;
+  box-shadow: 0px 2px 8px 0px #E0E0E0;
+  margin: $spacing-unit;
+  padding: $spacing-unit *2;
+  font-size: 14px;
+  line-height: 18px;
+
+  @include breakpoint('xs') {
+    margin: $spacing-unit * 2;
+  }
 
   @include breakpoint('md') {
     flex-direction: row;
+    width: 900px;
+    margin: $spacing-unit * 3 auto;
+  }
+
+  @include breakpoint('xlg') {
+    width: 1200px;
+  }
+
+  @include breakpoint('xxlg') {
+    width: 1600px;
+  }
+
+  &__info {
+    margin-right: $spacing-unit * 2;
+    white-space: nowrap;
+  }
+
+  &__description {
+    text-align: justify;
   }
 }
