@@ -1,0 +1,18 @@
+$dark-grey: #322626;
+$white: #FFF;
+
+$spacing-unit: 8px;
+
+body {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  :hover, :focus, :ative, :visited {
+    color: inherit;
+  }
+}

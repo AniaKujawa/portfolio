@@ -1,0 +1,37 @@
+.main {
+
+  &__video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .menu {
+    font-size: 28px;
+    color: $dark-grey;
+    display: flex;
+    position: absolute;
+    top: $spacing-unit * 2;
+    right: $spacing-unit * 2;
+
+    a {
+      margin-left: $spacing-unit * 2;
+    }
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: $spacing-unit * 2;
+    left: $spacing-unit * 2;
+
+    a {
+      border-radius: 50%;
+      color: $dark-grey;
+      background-color: $white;
+      margin-top: $spacing-unit * 2;
+      padding: $spacing-unit * 0.5;
+    }
+  }
+}
