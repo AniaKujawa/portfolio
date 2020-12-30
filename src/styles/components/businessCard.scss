@@ -1,0 +1,9 @@
+.business-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px 0px #000000;
+
+  @include breakpoint('md') {
+    flex-direction: row;
+  }
+}
