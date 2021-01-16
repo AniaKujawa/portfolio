@@ -9,16 +9,20 @@
   </head>
   <body>
     <section class="main">
-      <video playsinline autoplay muted class="main__video" autoplay>
-        <source src="./welcome.mp4" type="video/mp4"> 
-        Not
+      <video playsinline autoplay muted class="main__background dekstop" autoplay>
+        <source src="./welcome.mp4" type="video/mp4" media="screen and (min-width: 1024px)">
+        <img src="./background.png" alt="background" />
       </video>
-      <nav class="menu">
+      <img src="./background.png" class="main__background mobile" alt="background" />
+      <nav class="menu delayed">
         <a href="#about">About me</a>
         <a href="#road">Skills road</a>
         <a href="#contact">Contact</a>
       </nav>
-      <div class="socials">
+      <h1 class="main__header">
+        The journey into web development
+      </h1>
+      <div class="socials delayed">
         <a href='http://www.linkedin.com/in/annakujawa' target='_blank'><i class="fab fa-linkedin-in fa-2x"></i></a>
         <a href='https://github.com/AniaKujawa/' target='_blank'><i class="fab fa-github fa-2x"></i></a>
       </div>
@@ -36,6 +40,6 @@
         </div>
       </div>
     </section>
-    
+
   </body>
 </html>
