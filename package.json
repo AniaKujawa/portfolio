@@ -4,8 +4,7 @@
   "description": "About me, projets and skills",
   "main": "index.js",
   "scripts": {
-    "test": "not specified",
-    "build": "webpack --config webpack.config.js"
+    "start": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",

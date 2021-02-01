@@ -8,6 +8,7 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
+  watch: true,
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
