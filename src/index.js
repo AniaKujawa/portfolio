@@ -9,8 +9,8 @@ import "./styles/assets/nodejs_logo.png";
 import "./styles/assets/js_logo.png";
 import "./styles/assets/react_logo.png";
 import "./styles/assets/sass_logo.png";
-import "./styles/assets/jira_logo.svg";
-import "./styles/assets/trello_logo.svg";
+import "./styles/assets/jira_logo.png";
+import "./styles/assets/trello_logo.png";
 
 
 import './js/welcome';

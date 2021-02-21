@@ -19,7 +19,14 @@ const expanders = document.querySelectorAll('.skills-road__step-arrow');
 
 expanders.forEach(expander => {
   expander.addEventListener('click', () => {
-    const modal = document.querySelector('.skills-road__step-modal');
-    modal.classList.toggle('isHidden');
+    const parentEl = expander.parentElement;
+    const modal = parentEl.querySelector('.skills-road__step-modal');
+    
+    if(parentEl.classList.contains('skills-road__step-modal')) {
+      parentEl.classList.toggle('isHidden');
+      return;
+    }
+
+    modal && modal.classList.toggle('isHidden');
   });
 })

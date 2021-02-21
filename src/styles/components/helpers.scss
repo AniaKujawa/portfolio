@@ -1,0 +1,28 @@
+.tooltip {
+  visibility: hidden;
+  min-width: 100%;
+  background-color: $dark-grey;
+  color: $white;
+  text-align: center;
+  padding: $spacing-unit;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 0%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    
+    border-bottom: 5px solid $dark-grey;
+  }
+}
