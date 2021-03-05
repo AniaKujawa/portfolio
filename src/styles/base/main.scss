@@ -1,10 +1,11 @@
 $dark-grey: #322626;
-$white: #FFF;
+$white: #fff;
+$details-color: #079979;
 
 $spacing-unit: 8px;
 
 body {
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 12px;
 }
 
@@ -12,7 +13,10 @@ a {
   text-decoration: none;
   color: inherit;
 
-  :hover, :focus, :ative, :visited {
+  :hover,
+  :focus,
+  :ative,
+  :visited {
     color: inherit;
   }
 }
@@ -20,7 +24,7 @@ a {
 .desktop {
   display: none;
 
-  @include breakpoint('md') {
+  @include breakpoint("md") {
     display: block;
   }
 }
@@ -28,7 +32,7 @@ a {
 .mobile {
   display: block;
 
-  @include breakpoint('md') {
+  @include breakpoint("md") {
     display: none;
   }
 }

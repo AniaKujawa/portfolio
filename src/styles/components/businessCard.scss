@@ -1,33 +1,45 @@
 .business-card {
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 2px 8px 0px #E0E0E0;
+  box-shadow: 0px 2px 8px 0px #e0e0e0;
   margin: $spacing-unit;
   padding: $spacing-unit * 2;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
 
-  @include breakpoint('xs') {
-    margin: $spacing-unit * 2;
+  @include breakpoint("xs") {
+    margin: $spacing-unit * 6;
+    max-width: 600px;
   }
 
-  @include breakpoint('md') {
+  @include breakpoint("md") {
     flex-direction: row;
-    width: 900px;
-    margin: $spacing-unit * 3 auto;
+    max-width: 700px;
+    margin: $spacing-unit * 10 auto;
+    font-size: 14px;
+    line-height: 20px;
+    padding: $spacing-unit * 3;
   }
 
-  @include breakpoint('xlg') {
-    width: 1200px;
+  @include breakpoint("xlg") {
+    max-width: 900px;
   }
 
-  @include breakpoint('xxlg') {
-    width: 1600px;
+  @include breakpoint("xxlg") {
+    max-width: 1000px;
   }
 
   &__info {
-    margin-right: $spacing-unit * 2;
+    margin-right: $spacing-unit * 4;
     white-space: nowrap;
+
+    p {
+      margin-bottom: $spacing-unit * 2;
+    }
+
+    &--colored {
+      color: $details-color;
+    }
   }
 
   &__description {

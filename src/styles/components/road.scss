@@ -1,5 +1,5 @@
 .skills-road {
-  background: url('./assets/skills-background.png') center no-repeat;
+  background: url("./assets/skills-background.png") center no-repeat;
   background-size: cover;
   overflow-y: scroll;
   width: 100%;
@@ -25,7 +25,7 @@
 
   &__step {
     background: $white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 8px 0px #e0e0e0;
     padding: $spacing-unit * 2 $spacing-unit * 3;
     opacity: 0;
     transition: 1s ease-in;
@@ -41,6 +41,7 @@
       line-height: 28px;
       font-weight: 500;
       text-align: center;
+      color: $details-color;
     }
 
     &-timeline {
@@ -66,6 +67,7 @@
       display: block;
       position: absolute;
       background-color: $white;
+      box-shadow: 0px 2px 8px 0px #e0e0e0;
       padding: $spacing-unit * 2 $spacing-unit * 3;
       top: 0;
       left: 0;
@@ -73,7 +75,7 @@
       border-radius: 6px;
 
       h3 {
-        font-size:  20px;
+        font-size: 20px;
         line-height: 32px;
       }
 
@@ -94,7 +96,7 @@
       font-size: 40px;
 
       .tech-desc {
-        font-size: 12px
+        font-size: 12px;
       }
 
       &__technology {

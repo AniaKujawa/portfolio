@@ -1,23 +1,23 @@
 @keyframes appearing {
   0% {
     opacity: 0;
-  };
+  }
 
   100% {
     opacity: 1;
-  };
-};
+  }
+}
 
 @keyframes delayAppearing {
   0% {
     opacity: 0;
     visibility: visible;
-  };
+  }
 
   100% {
     opacity: 1;
-  };
-};
+  }
+}
 
 .main {
   width: 100%;
@@ -39,7 +39,7 @@
     animation: appearing 14s;
     padding: $spacing-unit * 4 0 0 $spacing-unit * 2;
 
-    @include breakpoint('md') {
+    @include breakpoint("md") {
       font-size: 56px;
       line-height: 72px;
       padding: $spacing-unit * 14 0 0 $spacing-unit * 5;
@@ -56,6 +56,10 @@
 
     a {
       margin-left: $spacing-unit * 2;
+
+      &:hover {
+        color: $details-color;
+      }
     }
   }
 
@@ -78,6 +82,10 @@
       background-color: $white;
       margin-top: $spacing-unit * 2;
       padding: $spacing-unit * 0.5;
+
+      &:hover {
+        color: $details-color;
+      }
     }
   }
 }
