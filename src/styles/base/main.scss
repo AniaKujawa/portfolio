@@ -1,11 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Spinnaker&display=swap");
+
 $dark-grey: #322626;
 $white: #fff;
 $details-color: #079979;
 
 $spacing-unit: 8px;
 
+$backgroundZindex: -1;
+$menuZindex: 2;
+$modalZindex: 9;
+
 body {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   font-size: 12px;
 }
 
