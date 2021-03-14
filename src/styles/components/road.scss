@@ -136,4 +136,79 @@
   .isHidden {
     display: none;
   }
+
+  &__projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $spacing-unit * 2;
+    
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__project-box {
+    min-height: 50px; 
+    display: flex;
+    justify-content: center;
+
+    .data {
+      color: $details-color;
+      font-weight: 700;
+    }
+
+    a.data {
+      font-size: 14px;
+      line-height: 18px;
+      margin: $spacing-unit * 2 0;
+
+      &:hover {
+        color: $dark-details;
+      }
+    }
+
+    &__description {
+      margin: $spacing-unit 0;
+    }
+  }
+
+  .project-box {
+    &__image {
+      position: relative;
+      margin-bottom: $spacing-unit;
+
+      img {
+        background-size: cover;
+        overflow: hidden;
+        max-width: 100%;
+        margin-bottom: 0;
+        -webkit-transition: 1s;
+        transition: 1s;
+      }
+    }
+  
+    &__details {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $details-color;
+      color: whitesmoke;
+      opacity: 0;
+      transition: opacity 0.25s ease-out;
+
+      > i {
+        margin: $spacing-unit;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }

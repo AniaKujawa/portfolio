@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/AniaKujawa/portfolio#readme",
   "dependencies": {
+    "node": "^15.10.0",
     "webpack": "^5.11.0",
     "webpack-cli": "^4.3.0"
   },

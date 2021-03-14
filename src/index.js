@@ -11,7 +11,14 @@ import "./styles/assets/react_logo.png";
 import "./styles/assets/sass_logo.png";
 import "./styles/assets/jira_logo.png";
 import "./styles/assets/trello_logo.png";
-
+import "./styles/assets/budget.jpg";
+import "./styles/assets/drinks.jpg";
+import "./styles/assets/gallery.jpeg";
+import "./styles/assets/lifechat.jpg";
+import "./styles/assets/manage_app.jpg";
+import "./styles/assets/owl.png";
+import "./styles/assets/safety-list.jpg";
+import "./styles/assets/weather.jpeg";
 
 import './js/welcome';
 import './js/road';
