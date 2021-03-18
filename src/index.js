@@ -23,7 +23,7 @@ import "./styles/assets/weather.jpeg";
 import "./styles/assets/landing.png";
 import "./styles/assets/gms.jpg";
 import "./styles/assets/WAS-CSS.png";
-import "./styles/assets/favicon.png";
+import "./styles/assets/favicon.svg";
 
 
 import './js/welcome';
