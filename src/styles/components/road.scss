@@ -42,7 +42,7 @@
   &__step {
     background: $white;
     box-shadow: 0px 2px 8px 0px #e0e0e0;
-    padding: $spacing-unit * 2 $spacing-unit * 3;
+    padding: $spacing-unit * 3;
     opacity: 0;
     transition: 1s ease-in;
     position: relative;
@@ -63,7 +63,7 @@
     &-timeline {
       font-size: 14px;
       line-height: 16px;
-      margin-top: $spacing-unit * 2;
+      margin: $spacing-unit * 2 0;
 
       &-position {
         margin: $spacing-unit 0;
@@ -78,6 +78,7 @@
       display: flex;
       justify-content: center;
       cursor: pointer;
+      color: $details-color;
     }
 
     &-modal {
@@ -140,7 +141,8 @@
   &__projects {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: $spacing-unit * 2;
+    gap: $spacing-unit * 3 $spacing-unit * 2;
+    margin: $spacing-unit * 2 0;
     
     @include breakpoint(sm) {
       grid-template-columns: repeat(2, 1fr);
