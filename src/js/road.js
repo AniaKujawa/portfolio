@@ -5,15 +5,30 @@ const options = {
 const displayStep = entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting && !entry.target.classList.contains('animate')) {
-      entry.target.classList.add('animate')
+      entry.target.classList.add('animate');
     }
   })
 };
 
 const observer = new IntersectionObserver(displayStep, options);
-
 const careerSteps = document.querySelectorAll('.skills-road__step');
 careerSteps.forEach(step => observer.observe(step));
+
+const showWholeElement = entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      window.scrollTo({ 
+        top: document.body.scrollHeight, 
+        left: 0, 
+        behavior: 'smooth' 
+      });
+    }
+  })
+}
+
+const observerSection = new IntersectionObserver(showWholeElement, { threshold: 0.1 });
+const roadSection = document.querySelector('#road');
+observerSection.observe(roadSection);
 
 const expanders = document.querySelectorAll('.skills-road__step-arrow');
 
