@@ -1,14 +1,23 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
+  mode: 'production',
   entry: './src/index.js',
   output:{
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve('./dist')
   },
-  watch: true,
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        exclude: /node_modules/,
+      }),
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
