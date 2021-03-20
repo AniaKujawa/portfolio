@@ -7,6 +7,8 @@ import "./styles/assets/redux-logo.png";
 import "./styles/assets/ts-logo.png";
 import "./styles/assets/nodejs_logo.png";
 import "./styles/assets/js_logo.png";
+import "./styles/assets/html5_logo.png";
+import "./styles/assets/css3_logo.png";
 import "./styles/assets/react_logo.png";
 import "./styles/assets/sass_logo.png";
 import "./styles/assets/jira_logo.png";
