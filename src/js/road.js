@@ -17,16 +17,16 @@ careerSteps.forEach(step => observer.observe(step));
 const showWholeElement = entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting) {
-      window.scrollTo({ 
-        top: document.body.scrollHeight, 
+      window.scrollBy({ 
+        top: entry.target.scrollHeight,
         left: 0, 
-        behavior: 'smooth' 
+        behavior: 'smooth'
       });
-    }
-  })
-}
+    };
+  });
+};
 
-const observerSection = new IntersectionObserver(showWholeElement, { threshold: 0.1 });
+const observerSection = new IntersectionObserver(showWholeElement);
 const roadSection = document.querySelector('#road');
 observerSection.observe(roadSection);
 

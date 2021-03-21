@@ -148,14 +148,14 @@
     grid-template-columns: 1fr;
     gap: $spacing-unit * 3 $spacing-unit * 2;
     margin: $spacing-unit * 2 0;
-    
+
     @include breakpoint(sm) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   &__project-box {
-    min-height: 50px; 
+    min-height: 50px;
     display: flex;
     justify-content: center;
 
@@ -193,7 +193,7 @@
         transition: 1s;
       }
     }
-  
+
     &__details {
       position: absolute;
       display: flex;

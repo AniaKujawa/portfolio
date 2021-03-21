@@ -1,0 +1,48 @@
+#contact {
+  background-color: $dark-details;
+
+  .contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-unit * 16 0;
+
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+      color: $white;
+      margin-bottom: $spacing-unit * 8;
+
+      @include breakpoint("sm") {
+        font-size: 35px;
+        line-height: 46px;
+      }
+    }
+
+    &__button {
+      padding: $spacing-unit * 2 0;
+      width: $spacing-unit * 12;
+      background-color: $middle-details;
+      color: $white;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      border-radius: 6px;
+
+      @include breakpoint("sm") {
+        font-size: 18px;
+        line-height: 24px;
+        width: $spacing-unit * 15;
+      }
+
+      &:first-of-type {
+        margin-right: $spacing-unit * 3;
+      }
+
+      &:hover {
+        background-color: $details-color;
+      }
+    }
+  }
+}
