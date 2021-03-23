@@ -19,6 +19,20 @@
   }
 }
 
+@keyframes jump {
+  0% {
+    bottom: 50px;
+  }
+
+  50% {
+    bottom: 20px;
+  }
+
+  100% {
+    bottom: 50px;
+  }
+}
+
 .main {
   width: 100%;
   height: 80vh;
@@ -118,7 +132,8 @@
     flex-direction: column;
     position: fixed;
     bottom: $spacing-unit * 2;
-    padding-left: $spacing-unit * 2;
+    padding-left: $spacing-unit * 3;
+    z-index: $socialZindex;
 
     a {
       border-radius: 50%;
@@ -130,6 +145,20 @@
       &:hover {
         color: $details-color;
       }
+    }
+  }
+
+  .arrow {
+    display: none;
+
+    @include breakpoint("md") {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+      animation: jump 1.5s infinite;
+      color: $details-color;
     }
   }
 

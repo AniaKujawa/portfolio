@@ -38,10 +38,15 @@ expanders.forEach(expander => {
     const modal = parentEl.querySelector('.skills-road__step-modal');
     
     if(parentEl.classList.contains('skills-road__step-modal')) {
-      parentEl.classList.toggle('isHidden');
+      const stepArrow = parentEl.parentElement.parentElement.lastElementChild;
+
+      parentEl.classList.toggle('isVisible');
+      stepArrow.classList.toggle('isVisible');
       return;
     }
 
-    modal && modal.classList.toggle('isHidden');
+    expander.classList.toggle('isVisible');
+
+    modal && modal.classList.toggle('isVisible');
   });
 })

@@ -46,12 +46,16 @@
   &__step {
     background: $white;
     box-shadow: 0px 0px 2px 0px #e0e0e0;
-    padding: $spacing-unit * 3;
     opacity: 0;
     transition: 1s ease-in;
-    position: relative;
     border-radius: 6px;
     max-width: 700px;
+    padding-bottom: $spacing-unit * 3;
+
+    &--relative {
+      position: relative;
+      padding: $spacing-unit * 3 $spacing-unit * 3 0;
+    }
 
     &.animate {
       opacity: 1;
@@ -95,6 +99,15 @@
       cursor: pointer;
       color: $details-color;
       font-size: 10px;
+      transform: scaleY(0);
+      transition: transform 0.5s;
+      transform-origin: top;
+
+      &.isVisible {
+        transform: scaleY(1);
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+      }
 
       @include breakpoint("md") {
         font-size: 12px;
@@ -106,11 +119,17 @@
       position: absolute;
       z-index: $modalZindex;
       background-color: $white;
-      box-shadow: 0px 0px 2px 0px #e0e0e0;
       padding: $spacing-unit * 2 $spacing-unit * 3;
-      top: 0;
+      top: 100%;
       left: 0;
-      border-radius: 6px;
+      border-radius: 0 0 6px 6px;
+      transform: scaleY(0);
+      transition: transform 0.5s;
+      transform-origin: top;
+
+      &.isVisible {
+        transform: scaleY(1);
+      }
 
       h3 {
         font-size: 16px;
@@ -170,7 +189,9 @@
   }
 
   .isHidden {
-    display: none;
+    // display: none;
+    opacity: 0;
+    transition: all ease-in 0.5s;
   }
 
   &__projects {
