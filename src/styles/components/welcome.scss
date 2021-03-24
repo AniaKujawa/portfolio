@@ -78,7 +78,7 @@
   .menu {
     font-size: 18px;
     color: $dark-grey;
-    background-color: $white;
+    background-color: $smoke-white;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -86,7 +86,7 @@
     position: absolute;
     z-index: $menuZindex;
     right: 0;
-    box-shadow: 0px 2px 8px 0px #e0e0e0;
+    border-radius: 0 0 6px 6px;
 
     @include breakpoint("sm") {
       font-size: 22px;
@@ -140,7 +140,7 @@
       color: $dark-grey;
       background-color: $white;
       margin-top: $spacing-unit * 2;
-      padding: $spacing-unit * 0.5;
+      padding: $spacing-unit;
 
       &:hover {
         color: $details-color;
@@ -167,8 +167,14 @@
     display: flex;
     justify-content: flex-end;
     padding: $spacing-unit * 2;
+    background-color: $smoke-white;
+    box-shadow: 0 0 0 1px $smoke-white;
 
     @include breakpoint("md") {
+      display: none;
+    }
+
+    .isHidden {
       display: none;
     }
   }

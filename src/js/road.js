@@ -1,6 +1,7 @@
 const options = {
   threshold: 1.0
 };
+const minimumIntersectingRatio = 0.5;
 
 const displayStep = entries => {
   entries.forEach(entry => {
@@ -16,7 +17,8 @@ careerSteps.forEach(step => observer.observe(step));
 
 const showWholeElement = entries => {
   entries.forEach(entry => {
-    if(entry.isIntersecting) {
+    console.log(entry.intersectionRatio);
+    if(entry.isIntersecting && entry.intersectionRatio < minimumIntersectingRatio) {
       window.scrollBy({ 
         top: entry.target.scrollHeight,
         left: 0, 
@@ -38,9 +40,11 @@ expanders.forEach(expander => {
     const modal = parentEl.querySelector('.skills-road__step-modal');
     
     if(parentEl.classList.contains('skills-road__step-modal')) {
-      const stepArrow = parentEl.parentElement.parentElement.lastElementChild;
+      const step = parentEl.parentElement.parentElement;
+      const stepArrow = step.lastElementChild;
 
       parentEl.classList.toggle('isVisible');
+      step.scrollIntoView({ block: 'start', behavior: 'smooth'} );
       stepArrow.classList.toggle('isVisible');
       return;
     }
