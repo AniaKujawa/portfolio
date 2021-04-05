@@ -9,8 +9,16 @@
     padding-top: $spacing-unit * 6;
   }
 
-  @include breakpoint("md") {
-    padding-top: $spacing-unit * 10;
+  &__title {
+    text-align: center;
+    color: $details-color;
+    font-size: 24px;
+    line-height: 32px;
+
+    @include breakpoint("md") {
+      font-size: 35px;
+      line-height: 46px;
+    }
   }
 
   .business-card {
@@ -30,7 +38,7 @@
     @include breakpoint("md") {
       flex-direction: row;
       max-width: 700px;
-      margin: 0 auto $spacing-unit * 10;
+      margin: $spacing-unit * 3 auto $spacing-unit * 10;
       font-size: 14px;
       line-height: 20px;
       padding: $spacing-unit * 3;
@@ -63,24 +71,12 @@
   }
 
   .business-technologies {
-    &__title {
-      text-align: center;
-      color: $details-color;
-      font-size: 24px;
-      line-height: 32px;
-
-      @include breakpoint("md") {
-        font-size: 35px;
-        line-height: 46px;
-      }
-    }
-
     &__container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       justify-items: center;
       margin: $spacing-unit * 4 auto $spacing-unit * 6;
-      row-gap: $spacing-unit * 4;
+      gap: $spacing-unit * 3;
       max-width: 300px;
 
       @include breakpoint("xs") {
@@ -89,8 +85,8 @@
 
       @include breakpoint("md") {
         max-width: 500px;
-        margin: $spacing-unit * 8 auto;
-        row-gap: $spacing-unit * 6;
+        margin: $spacing-unit * 4 auto;
+        gap: $spacing-unit * 4;
       }
 
       @include breakpoint("xlg") {
@@ -100,10 +96,23 @@
       @include breakpoint("xxlg") {
         max-width: 700px;
       }
+    }
+
+    &__tech {
+      box-shadow: 0px 2px 8px 0px #e0e0e0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: $spacing-unit * 2 0;
+
+      &.special {
+        position: relative;
+        left: 50%;
+      }
 
       img {
         max-width: 100%;
-        max-height: 50px;
+        max-height: 40px;
         transition: all 0.5s ease;
         cursor: pointer;
 
@@ -117,11 +126,6 @@
 
         @include breakpoint("lg") {
           max-height: 70px;
-        }
-
-        &.special {
-          position: relative;
-          left: 50%;
         }
       }
     }
